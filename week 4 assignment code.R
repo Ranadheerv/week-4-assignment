@@ -62,6 +62,7 @@ p2=ggplot(Maize_LD.chr4, aes(x = as.numeric(Dist_bp)/1000000, y = R.2)) +
   geom_hline(yintercept = 0.2, col="red") +
   xlab("Distance (Mb)")+
   ylab(expression("LD ("~italic("r")^"2"~")"))
+library(cowplot)
 plot_grid(p1, p2)
 plot_grid(p1, p2, nrow = 2, labels = c("A", "B"))
 
